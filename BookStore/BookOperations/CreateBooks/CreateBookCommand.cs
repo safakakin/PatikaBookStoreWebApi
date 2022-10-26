@@ -1,4 +1,5 @@
-﻿using BookStore;
+﻿using AutoMapper;
+using BookStore;
 using WebApi.DBOperations;
 
 namespace WebApi.BookOperations.CreateBooks
@@ -9,10 +10,12 @@ namespace WebApi.BookOperations.CreateBooks
 		public CreateBookModel Model { get; set; }
 
 		private readonly BookStoreDbContext _dbContext;
+        private readonly IMapper _mapper;
 
-		public CreateBookCommand(BookStoreDbContext dbContext)
-		{
-			_dbContext = dbContext;
+        public CreateBookCommand(BookStoreDbContext dbContext, IMapper mapper)
+        {
+            _dbContext = dbContext;
+            _mapper = mapper;
         }
         public void Handle()
 		{

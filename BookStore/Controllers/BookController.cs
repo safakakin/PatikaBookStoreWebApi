@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using BookStore;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -27,10 +28,12 @@ namespace WebApi.Controllers
     {
 
         private readonly BookStoreDbContext _context; //readonly değiştirilememesi için
+        
 
         public BookController(BookStoreDbContext context)
         {
-            _context = context;
+            _context = context; 
+            
         }
 
         //private static List<Book> BookList = new List<Book>()
