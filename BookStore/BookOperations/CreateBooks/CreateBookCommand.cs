@@ -23,11 +23,11 @@ namespace WebApi.BookOperations.CreateBooks
 
 			if (book is not null)
 				throw new InvalidOperationException("Kitap zaten mevcut.");
-			book = new Book();
-			book.Title = Model.Title;
-			book.PublishDate = Model.PublishDate;
-			book.PageCount = Model.PageCount;
-			book.GenreId = Model.GenreId;
+			book = _mapper.Map<Book>(Model);//new Book();
+			//book.Title = Model.Title;
+			//book.PublishDate = Model.PublishDate;
+			//book.PageCount = Model.PageCount;
+			//book.GenreId = Model.GenreId;
 
 
             _dbContext.Books.Add(book);

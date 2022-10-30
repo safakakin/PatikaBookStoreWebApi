@@ -17,6 +17,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.10" />
     <PackageReference Include="AutoMapper" Version="12.0.0" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="FluentValidation" Version="11.2.2" />
   </ItemGroup>
 
   <ItemGroup>
@@ -33,6 +34,8 @@
     <None Remove="BookOperations\GetBooksById\" />
     <None Remove="AutoMapper" />
     <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="FluentValidation" />
+    <None Remove="BookOperations\DeleteBook\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -43,5 +46,6 @@
     <Folder Include="BookOperations\CreateBooks\" />
     <Folder Include="BookOperations\UpdateBooks\" />
     <Folder Include="BookOperations\GetBooksById\" />
+    <Folder Include="BookOperations\DeleteBook\" />
   </ItemGroup>
 </Project>
